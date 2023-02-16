@@ -63,35 +63,35 @@ const App = () => {
       <h3 style={{color:'red'}}>{notification}</h3>
       <form onSubmit={addEntry}>
         date:&emsp;<input type='date' value={date} onChange={(e)=>setDate(e.target.value)}></input><br/>
-          <div>
+        <div>
           visibility: &emsp;
-            <label htmlFor='choiceGreat'>great</label>
-            <input type='radio' id='choiceGreat' name='visibility' onChange={() => setVisibility('great')}/>&nbsp;
-            <label htmlFor='choiceGood'>good</label>
-            <input type='radio' id='choiceGood' name='visibility' onChange={() => setVisibility('good')}/>&nbsp;
-            <label htmlFor='choiceOk'>ok</label>
-            <input type='radio' id='choiceOk' name='visibility' onChange={() => setVisibility('ok')}/>&nbsp;
-            <label htmlFor='choicePoor'>poor</label>
-            <input type='radio' id='choicePoor' name='visibility' onChange={() => setVisibility('poor')}/>
-          </div>
-          <div>
+          <label htmlFor='choiceGreat'>great</label>
+          <input type='radio' id='choiceGreat' name='visibility' onChange={() => setVisibility('great')}/>&nbsp;
+          <label htmlFor='choiceGood'>good</label>
+          <input type='radio' id='choiceGood' name='visibility' onChange={() => setVisibility('good')}/>&nbsp;
+          <label htmlFor='choiceOk'>ok</label>
+          <input type='radio' id='choiceOk' name='visibility' onChange={() => setVisibility('ok')}/>&nbsp;
+          <label htmlFor='choicePoor'>poor</label>
+          <input type='radio' id='choicePoor' name='visibility' onChange={() => setVisibility('poor')}/>
+        </div>
+        <div>
           weather: &emsp;
-            <label htmlFor='choiceSunny'>sunny</label>
-            <input type='radio' id='choiceSunny' name='weather' onChange={() => setWeather('sunny')}/>&nbsp;
-            <label htmlFor='choiceRainy'>rainy</label>
-            <input type='radio' id='choiceRainy' name='weather' onChange={() => setWeather('rainy')}/>&nbsp;
-            <label htmlFor='choiceCloudy'>cloudy</label>
-            <input type='radio' id='choiceCloudy' name='weather' onChange={() => setWeather('cloudy')}/>&nbsp;
-            <label htmlFor='choiceStormy'>stormy</label>
-            <input type='radio' id='choiceStormy' name='weather' onChange={() => setWeather('stormy')}/>&nbsp; 
-            <label htmlFor='choiceWindy'>windy</label>
-            <input type='radio' id='choiceWindy' name='weather' onChange={() => setWeather('windy')}/>    
-          </div>
+          <label htmlFor='choiceSunny'>sunny</label>
+          <input type='radio' id='choiceSunny' name='weather' onChange={() => setWeather('sunny')}/>&nbsp;
+          <label htmlFor='choiceRainy'>rainy</label>
+          <input type='radio' id='choiceRainy' name='weather' onChange={() => setWeather('rainy')}/>&nbsp;
+          <label htmlFor='choiceCloudy'>cloudy</label>
+          <input type='radio' id='choiceCloudy' name='weather' onChange={() => setWeather('cloudy')}/>&nbsp;
+          <label htmlFor='choiceStormy'>stormy</label>
+          <input type='radio' id='choiceStormy' name='weather' onChange={() => setWeather('stormy')}/>&nbsp; 
+          <label htmlFor='choiceWindy'>windy</label>
+          <input type='radio' id='choiceWindy' name='weather' onChange={() => setWeather('windy')}/>    
+        </div>
         comment:&emsp;<input value={comment} onChange={(e)=>setComment(e.target.value)}></input><br/>
         <button type="submit">add</button>
       </form>
       <h2>Diary entries</h2>
-  {diary.map(e => <div key={e.id}><h3>{e.date}</h3><p>visibility: {e.visibility}<br/>weather: {e.weather}</p></div>)}
+      {diary.map(e => <div key={e.id}><h3>{e.date}</h3><p>visibility: {e.visibility}<br/>weather: {e.weather}</p></div>)}
     </div>
   );
 };
